@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP9</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.7.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/dist/app.css">
+    <style>
+        #wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #f6f6f6;
+        }
+        #create-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+        }
+        .title {
+            font-size: 4.5em;
+            color: #565656;
+            font-weight: 900;
+            text-align: center;
+        }
+        .input-label {
+            font-size: 1em;
+            color: #999999;
+        }
+
+        .form-input,.select {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #999999;       
+        }
+        .form-input::placeholder,select:disabled {
+            color: #cccccc;
+        }
+        .btn {
+            background-color: #92c8c1;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+        .select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .select-box {
+            position: relative;
+        }
+        .bx-chevron-down {
+            position: absolute;
+            font-size: 1.5em;
+            color:#cccccc;
+            right: 10px;
+            top:25px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section id="wrapper">
+        <form id="create-box">
+            <div class="title noto">TP9</div>
+            <div class="input-box">
+                <label class="input-label">이름</label>
+                <input type="text" class="form-input" placeholder="이름">
+            </div>
+            <div class="input-box">
+                <label class="input-label">생년월일</label>
+                <input type="text" class="form-input" placeholder="ex) 880715">
+            </div>
+            <div class="input-box">
+                <label class="input-label">ID(계정)</label>
+                <input type="email" class="form-input" placeholder="이메일 계정">
+            </div>
+            <div class="input-box">
+                <label class="input-label">비밀번호</label>
+                <input type="password" class="form-input" placeholder="비밀번호">
+            </div>
+            <div class="input-box">
+                <label class="input-label">부서</label>
+                <div class="select-box">
+                    <select name="" id="" class="select">
+                        <option value="" disabled selected>부서를 선택해 주세요</option>
+                        <option value=""></option>
+                    </select>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <label class="input-label">직급/직책</label>
+                <div class="select-box">
+                    <select name="" id="" class="select">
+                        <option value="" disabled selected>직급을 선택해 주세요</option>
+                        <option value=""></option>
+                    </select>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <label class="input-label">휴대전화</label>
+                <input type="num" class="form-input" placeholder="'-' 제외하고 넣어주세요">
+            </div>
+            <div class="input-box">
+                <button type="submit" class="btn">가입하기</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

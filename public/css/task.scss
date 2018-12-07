@@ -1,0 +1,88 @@
+@import './utils';
+
+.tp_tasks_box {
+    width: 90%;
+    margin: auto;
+    .tp_tasks_head_line {
+        margin-bottom: 4vh;
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;        
+
+        .tp_tasks_main_title_box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: #545454;
+                font-size: 1em;
+                margin-left: 7px;
+                cursor: pointer;
+                transition: all 0.4s;
+                opacity: 0.2;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .tp_tasks_plus_box {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid $main;
+            position: relative;
+            cursor: pointer;
+
+            .hor {
+                width: 2px;
+                height: 15px;
+            }
+
+            .ver {
+                width: 15px;
+                height: 2px;
+            }
+
+            .ver, .hor {
+                position: absolute;                
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $main;
+            }
+        }
+    }
+    .tp_tasks_main_title {
+        font-size: 1.6em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tp_tasks_list_box {
+        width: 100%;
+        
+
+
+    }
+}
+
+.tp_create_tasktitle_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .tp_create_tasktitle {
+        font-size: 1.1em;
+        color: #545454;
+    }
+
+    i {
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+}

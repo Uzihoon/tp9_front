@@ -1,0 +1,461 @@
+@import 'utils';
+
+.tp_project_detail_wrapper {
+    display: flex;
+    padding: 0;
+
+    .tp_project_detail_container {
+        width: 50%;
+        height: 100%;
+        min-height: 600px;
+        overflow: auto;
+
+        &.detail_left_side {
+            padding: 50px;
+        }
+
+        &.detail_right_side {
+            background-color: #f9f9f9;
+            border-left: 1px solid #dcdcdc;
+            border-right: 1px solid #dcdcdc;
+            height: 100%;
+
+            .tp_project_manager_box {
+                width: 100%;
+                height: 25%;
+                border-bottom: 1px solid #dcdcdc;
+                padding: 20px;
+                display: flex;
+                .tp_project_add_manager {
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover .bx-x {
+                        color: #545454;
+                    }
+                    .bx-x {
+                        font-size: 3em;
+                        color: #dcdcdc;
+                        transform: rotate(45deg) ;
+                        transition: all 0.2s;
+                    }
+                }
+                .tp_project_manager_info_box,
+                .tp_project_manager_status {
+                    width: 50%;
+                    height: 100%;
+                }
+
+                .tp_project_manager_info_box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+
+                    .tp_project_manager_type {
+                        font-size: 1.7em;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+
+                    .tp_project_manager_name {
+                        font-size: 1.3em;
+                        color: #565656;
+                    }
+
+                    .tp_set {
+                        justify-content: flex-start;
+
+                        .tp_set_link i {
+                            font-size: 3.5em;
+                        }
+
+                        .tp_set_link {
+                            width: 50px;
+                            height: 50px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                .tp_project_manager_status {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    .status_num {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 1.5em;
+                        color: #565656;
+                    }
+
+                    .change_manager {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+
+                        i {
+                            font-size: 2em;
+                            color: #969696;
+                            transition: all 0.2s;
+
+                            &:hover {
+                                color: #565656;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tp_project_part_title {
+            font-size: 2.14em;
+            color: #565656;
+            text-align: center;
+        }
+
+        .tp_project_part_status {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .delay_project {
+            color: #e43434;
+            font-weight: bold;
+        }
+
+        .gauge_contrl_box {
+            text-align: center;
+            padding-top: 8vh;
+            padding-bottom: 8vh;
+        }
+
+        .tp_project_date {
+            width: 245px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-top: 5px;
+
+            .tp_present_date {
+                font-size: 1.5em;
+                color: #009570;
+                font-weight: bold;
+            }
+
+            .tp_start_date,
+            .tp_due_date {
+                font-size: 1.2em;
+                color: #565656;
+                font-weight: bold;
+            }
+
+            .tp_present_gauge_title {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4em;
+                color: #e43434;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.project_container {
+    padding: 0;
+    background-color: #ffffff;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+
+    .tp_chat_header {
+        width: 100%;
+
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dcdcdc;
+
+        .tp_chat_type {
+            font-size: 1.3em;
+            color: #565656;
+            font-weight: bold;
+        }
+    }
+
+    .tp_chat_container {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .tp_chat_box {
+            width: 100%;
+            flex: 1;
+            padding: 20px 40px;
+            overflow: auto;
+
+            .tp_chat_message_box {
+                width: 100%;
+
+                &.my {
+                    text-align: right;
+                }
+
+                margin-bottom: 10px;
+
+                .tp_chat_message {
+                    display: inline-block;
+                    max-width: 300px;
+                    padding: 18px;
+                    background-color: #eaeaea;
+                    color: #565656;
+                    font-size: 1.2em;
+                    border-radius: 10px;
+                    line-height: 23px;
+                }
+            }
+        }
+
+        .tp_chat_input_box {
+            width: 100%;
+            height: 60px;
+            border-top: 1px solid #dcdcdc;
+            display: flex;
+
+            .tp_chat_input {
+                flex: 1;
+                height: 100%;
+                padding: 10px;
+                font-size: 1.2em;
+            }
+
+            .tp_chat_btn {
+                width: 60px;
+                height: 100%;
+                background-color: $main;
+                color: #ffffff;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.tp_project_popup_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    .tp_project_background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        cursor: pointer;
+    }
+
+    .tp_project_popupBg {
+        position: absolute;
+        z-index: 2;
+        background-color: #ffffff;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+        &.change_team_popup {
+            width: 300px;
+            height: 200px;
+            padding: 15px;
+        }
+
+        &.plus_team_popup {
+            width: 533px;
+            min-height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            // max-height: 600px;
+            overflow: auto;
+        }
+
+        .popup_titleBox {
+            width: 100%;
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dcdcdc;
+            justify-content: space-between;
+
+            .bx-x {
+                font-size: 1.3em;
+                cursor: pointer;
+            }
+        }
+
+        .popup_title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .popup_select_box {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        
+            .popup_present_name {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            .bx-arrow-back {
+                transform: rotate( 180deg);
+                font-size: 1.2em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .popup_select {
+                flex: 1;
+                height: 30px;
+            }
+        }
+
+        .popup_btn {
+            width: 100%;
+            height: 40px;
+            background-color: $main;
+            color: #ffffff;
+            font-size: 1.15em;
+            border-radius: 5px;
+        }
+        .partMember_list_box  {
+            font-size: 1.1em;
+            input[type="radio"] {
+                display: none;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .partMember_label_box {
+                display: flex;
+                align-items: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-right: 15px;
+                cursor: pointer;
+
+                .bx {
+                    font-size: 1.2em;
+                }
+
+                .partMember_text {
+                    margin-left: 5px;
+                }
+            }
+
+        }
+        .plus_team_list_container {
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            margin-bottom: 15px;
+            max-height: 400px;
+            overflow: auto;
+        }
+
+        .plus_team_check_container {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .plus_team_check_label {
+                    font-size: 1.2em;
+                    color: #565656;
+                }
+                .bx {
+                    font-size: 1.4em;
+                    color: #565656;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.partMember_wrapper {
+    .partMember_title_box {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.1em;
+        color: #565656;
+        display: flex;
+        align-items: center;
+        .partMemeber_title {
+            font-weight: bold;
+        }
+        .partMember_title_icon  {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+
+            &.dev_icon {
+                background-color: red;
+            }
+
+            &.plan_icon {
+                background-color: blue;
+            }
+
+            &.marketing_icon {
+                background-color: yellow;
+            }
+
+            &.design_icon {
+                background-color: green;
+            }
+        }
+    }
+
+    .partMember_comment_box {
+        height: 40px;
+        border: 1px solid #dcdcdc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            &::placeholder {
+                color: #bbbbbb;
+            }
+        }
+    }
+}

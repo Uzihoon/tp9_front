@@ -1,0 +1,29 @@
+$nb-width: 1300px;
+$mb-width: 700px;
+$main: #92c8c1;
+$font: #48988e;
+$font_color: #242424;
+
+@mixin notebook {
+    @media screen and (max-width: #{$nb-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$mb-width}) {
+        @content;
+    }
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.noto {
+    font-family: 'Noto Sans KR', 'sans-serif';
+}
+
+.nanum {
+    font-family: 'Nanum Gothic', 'sans-serif';
+}
+

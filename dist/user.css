@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);.noto {
+  font-family: 'Noto Sans KR', 'sans-serif'; }
+
+.nanum {
+  font-family: 'Nanum Gothic', 'sans-serif'; }
+
+.tp_user_wrapper {
+  width: 80%;
+  margin: auto;
+  min-width: 1100px; }
+  .tp_user_wrapper .tp_user_box {
+    width: 100%;
+    margin-top: 75px; }
+  .tp_user_wrapper .tp_user_title_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px; }
+    .tp_user_wrapper .tp_user_title_wrapper .tp_user_title {
+      font-size: 2em;
+      color: #92c8c1; }
+  .tp_user_wrapper .tp_user_title {
+    font-size: 1.1em;
+    color: #999999;
+    margin-bottom: 10px; }
+  .tp_user_wrapper .tp_user_detail_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px; }
+    .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box {
+      width: 340px;
+      height: 140px;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      padding: 25px;
+      display: flex;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px; }
+      .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_img_box {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_img_box img {
+          width: 100%;
+          /*width: 76px;*/ }
+      .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box {
+        width: 70%;
+        height: 100%;
+        padding-left: 10px; }
+        .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_name_box {
+          margin-bottom: 15px; }
+          .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_name_box .tp_user_name {
+            font-size: 1.35em;
+            font-weight: bold;
+            color: #565656; }
+          .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_name_box .tp_user_position {
+            font-size: 1.14em;
+            color: #565656; }
+        .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_department_box {
+          margin-bottom: 15px; }
+          .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_department_box .tp_user_department {
+            color: #565656; }
+        .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_email_box {
+          margin-bottom: 15px; }
+          .tp_user_wrapper .tp_user_detail_wrapper .tp_user_detail_box .tp_user_info_box .tp_user_email_box .tp_user_email {
+            word-break: break-all; }

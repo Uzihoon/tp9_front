@@ -1,0 +1,780 @@
+@import 'utils';
+
+.tp_schPopup_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    .tp_schPopup_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .tp_schPopup_box {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        min-width: 450px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .new_project_btn {
+            max-width: 300px;
+            margin: auto;
+        }
+        &.conf_popup {
+            height: 80%;
+            min-height: 400px;
+            width: 20%;
+
+            .tp_label_box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .tp_production_label {
+                    display: block;
+                    width: 49%;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    height: 40px;
+                    background-color: #e0e0e0;
+                    cursor: pointer;
+
+
+                    input[type=checkbox] {
+                        display: none;
+                    }
+
+                    input[type=checkbox]:checked {
+                        &+.tp_production_btn {
+                            color: #ffffff;
+                        }
+                    }
+
+                    .tp_production_btn {
+                        width: 100%;
+                        height: 100%;
+                        color: #999999;
+                        font-size: 1.1em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+            }
+
+        }
+
+        &.meet_popup {
+            height: 90%;
+            width: 20%;
+            max-height: 825px;
+        }
+
+        .tp_schPopup_icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $main;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin-left: -30px;
+            margin-top: -30px;
+            background-size: 30px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .tp_schPopup_form {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+
+            .tp_schPopup_button_box {
+                width: 100%;
+                text-align: center;
+            }
+            .tp_schPopup_button {
+                width: 100%;
+                height: 40px;
+                background-color: $main;
+                color: #ffffff;
+                font-size: 1.2em;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+
+            .tp_schPopup_title {
+                text-align: center;
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+
+            .tp_event_btn_box {
+                width: 100%;
+                margin: auto;
+                height: 40px;
+                .tp_popup_btn {
+                    width: 50%;
+                    height: 100%;
+                    border: 1px solid #cccccc;
+                    &:first-child {
+                        border-radius: 5px 0 0 5px;
+                    }
+                    &:last-child {
+                        border-radius: 0 5px 5px 0;
+                    }
+
+                    &.active {
+                        border: 0px;
+                        background: $main;
+                        color: #ffffff;
+                    }
+                }
+
+                
+            }
+
+            .tp_schPopup_label {
+                color: #999999;
+            }
+
+            .tp_schPopup_input {
+                display: block;
+                margin-top: 10px;
+                width: 100%;
+                height: 40px;
+                background-color: #e0e0e0;
+                padding: 10px;
+            }
+
+            .tp_schPopup_inputBox {
+                margin-bottom: 20px;
+
+                .tp_select_box {
+                    height: 40px;
+                    margin-top: 5px;
+                    position: relative;
+
+                    .tp_place_select {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #e0e0e0;
+                    border: 0px;
+                        padding: 10px;
+                        padding-right: 30px;
+                        color: #565656;
+                        font-size: 1.1em;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        display: block;
+                        position: absolute;
+                        top: 8px;
+                        right: 5px;
+                        font-size: 2em;
+                        color: #999999;
+                    }
+                }
+
+                .tp_sendBox {
+                    height: 40px;
+                    margin-top: 5px;
+                    position: relative;
+                    background-color: #e0e0e0;
+                    padding-right: 35px;
+
+                    i {
+                        display: block;
+                        position: absolute;
+                        font-size: 2em;
+                        right: 5px;
+                        top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.task_edit_date_box {
+    .datePicker_wrapper {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.datePicker_wrapper {
+    // display: none;
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    width: 245px;
+    height: 283px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 5;
+    padding: 10px;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+    .datePicker_titleBox {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+
+        .datePicker_Year,
+        .datePicker_month {
+            color: #999999;
+        }
+
+        .datePicker_btnBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                font-size: 1.8em;
+                margin-left: 5px;
+                margin-right: 5px;
+                border-radius: 50%;
+                color: #999999;
+
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
+        }
+    }
+
+
+    .datePopup_body {
+        position: relative;
+        width: 100%;
+        height: calc(100%/6);
+
+        .datePopup_bg {
+            width: 100%;
+            display: flex;
+            height: 100%;
+
+            .bg {
+                width: calc(100%/7);
+                height: 100%;
+                border-radius: 50%;
+                position: relative;
+
+                &.active {
+                    background-color: $main;
+                }
+
+                &.default {
+                    position: relative;
+                    z-index: 5;
+                    opacity: 0.5;
+                    background-color: #ffffff;
+                    cursor: default;
+                }
+            }
+        }
+
+
+    }
+
+    .datePopup_dayList {
+        width: 100%;
+        display: flex;
+        font-size: 13px;
+        .datePopup_day {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                color: #999999;
+            }
+        }
+    }
+}
+
+#date_body {
+    width: 100%;
+    height: 193px;
+
+    .datePopup_date {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        .datePopup_num {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .num {
+                width: calc(100%/7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                border-radius: 50%;
+                transition: all 0.2s;
+                padding: 4px;
+
+                .date-text {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.5em;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    .date-text {
+                        background-color: #e0e0e0;
+                    }
+                }
+
+                &.active {
+                    .date-text {
+                        background-color: $main;
+                        color: #ffffff;
+                    }
+                }
+
+                &.selected-date {
+                    .date-text {
+                        background-color: #e0e0e0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.tp_attend_wrapper {
+    margin-top: 10px;
+
+    .tp_attend_container {
+        margin-bottom: 5px;
+        position: relative;
+
+        .tp_append_input_total_box {
+            width: 100%;
+            height: 40px;
+            background-color: #e0e0e0;
+            padding: 5px;
+        }
+
+        .tp_attend_title,
+        .tp_attend_inputBox {
+            float: left;
+            height: 100%;
+
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+
+        .tp_attend_title {
+            width: 15%;
+            text-align: center;
+            font-size: 1em;
+            color: #667a77;
+            font-weight: 600;
+            line-height: 30px;
+        }
+
+        .tp_attend_inputBox {
+            width: 85%;
+            position: relative;
+
+            .tp_attend_input {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                color: #667a77;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.tp_attend_selectBox {
+    width: 100%;
+    margin-top: 5px;
+
+    .tp_selected_input {
+        display: inline-block;
+        padding: 5px;
+        width: auto;
+        min-width: 50px;
+        border-radius: 5px;
+        height: 30px;
+        background-color: $main;
+        color: #ffffff;
+        margin: 5px;
+
+        i {
+            margin-left: 3px;
+        }
+    }
+}
+
+.tp_attend_search_wrapper {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    height: 150px;
+    background-color: #ffffff;
+    z-index: 10;
+    overflow: hidden;
+
+    .tp_attend_search_content {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        .tp_attend_search_list {
+            padding: 10px;
+            display: flex;
+            transition: all 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e0e0e0;
+            }
+        }
+
+    }
+
+    .tp_attend_profileBox {
+        width: 15%;
+
+        .tp_attend_profile_imgBox {
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            .tp_attend_profileImg {
+                width: 100%;
+                height: 100%;
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                // background-image: url(/public/img/user_profile.png);
+            }
+        }
+    }
+
+    .tp_attend_profile_infoBox {
+        width: 85%;
+
+        .tp_attend_name {
+            font-size: 1em;
+            color: #242424;
+            margin-bottom: 5px;
+        }
+
+        .tp_attend_email {
+            color: #999999;
+        }
+    }
+
+
+}
+
+
+.popup_shadow {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.project_popup {
+    width: 850px;
+    max-width: 90%;
+    height: 65%;
+    min-height: 400px;
+    max-height: 70%;
+
+    .project_popup_title_list {
+        display: flex;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .project_popup_title {
+            font-size: 1.1em;
+            color: #999999;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .project_popup_select_list {
+        display: flex;
+        height: 45px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .project_default_box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #ffffff;
+            z-index: 2;
+            opacity: 0.8;
+        }
+        .project_popup_detail {
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            
+
+            .project_choice_container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .bx {
+                    font-size: 1.5em;
+                    margin-right: 5px;
+                    color: #999999;
+                    cursor: pointer;
+                }
+
+                label {
+                    font-size: 1.1em;
+                    color: #959595;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+            }
+            .due_date_box,.start_date_box {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .datePicker_wrapper {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .bx-calendar {
+                    position: absolute;
+                    font-size: 1.5em;
+                    right: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    color: #959595;
+                }
+            }
+            .project_select_box {
+                width: 100%;
+                height: 100%;
+                border: 1px solid #959595;
+                cursor: pointer;
+                padding: 5px;
+                position: relative;
+                padding-right: 25px;
+
+                select {
+                    width: 100%;
+                    height: 100%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: 0px;
+                    outline: 0px;
+                    cursor: pointer;
+                    option {
+                        cursor: pointer;
+                    }
+                }
+                i {
+                    position: absolute;
+                    font-size: 1.5em;
+                    right: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    color: #959595;
+                }
+
+                
+            }
+
+            .due_date_input,
+            .comment_input,
+            .start_date_input {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #959595;
+                padding: 5px;
+            }
+
+            .due_date_input,.start_date_input {
+                cursor: pointer;
+            }
+
+
+        }
+    }
+
+    .part_setting {
+        width: 15%;
+    }
+
+    .part_admin {
+        width: 20%;
+    }
+
+    .due_date {
+        width: 20%;
+    }
+
+    .start_date {
+        width: 20%;
+    }
+
+    .part_comment {
+        width: 25%;
+    }
+}
+
+.tp_dateSettingBox {
+    height: 40px;
+    margin-top: 10px;
+
+    .tp_dateSetting {
+        width: 49%;
+        height: 100%;
+        float: left;
+        cursor: pointer;
+        color: #565656;
+        font-size: 1.1em;
+        line-height: 30px;
+        padding: 5px;
+        background-color: #e0e0e0;
+        position: relative;
+
+        &:nth-child(1) {
+            margin-right: 1%;
+        }
+
+        &:nth-child(2) {
+            margin-left: 1%;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .tp_dateSetting_input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .timeWrapper_wrapper {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background-color: #ffffff;
+            overflow: hidden;
+            z-index: 30;
+            top: 45px;
+            left: 0;
+            -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+            .timeWrapper_list {
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+
+                .timeList {
+                    font-size: 0.8em;
+                }
+
+                div {
+                    padding: 5px;
+
+                    &:hover {
+                        background-color: #e0e0e0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tp_attend_msg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #999999;
+}
+
+.tp_input_place_box {
+    margin-bottom: 20px;
+    position: relative;
+    .tp_place_default_box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #ffffff;
+        opacity: 0.5;
+    }
+}
+

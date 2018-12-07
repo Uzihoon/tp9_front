@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);.noto {
+  font-family: 'Noto Sans KR', 'sans-serif'; }
+
+.nanum {
+  font-family: 'Nanum Gothic', 'sans-serif'; }
+
+.tp_user_wrapper {
+  width: 100%;
+  margin: auto;
+  min-width: 1200px; }
+  .tp_user_wrapper .tp_user_box {
+    width: 100%;
+    margin-top: 75px; }
+  .tp_user_wrapper .tp_user_title_wrapper {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px; }
+    .tp_user_wrapper .tp_user_title_wrapper .tp_user_title {
+      font-size: 2em;
+      color: #92c8c1; }
+  .tp_user_wrapper .tp_user_title {
+    font-size: 1.1em;
+    color: #999999;
+    margin-bottom: 10px; }
+  .tp_user_wrapper .tp_userList_wrapper {
+    width: 100%;
+    margin-top: 50px; }
+  .tp_user_wrapper .tp_userList_title {
+    width: 100%; }
+    .tp_user_wrapper .tp_userList_title .tp_titleList {
+      width: 100%;
+      display: flex;
+      padding-left: 50px;
+      padding-right: 50px;
+      align-items: center; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList.title_list {
+        background-color: #f9f9f9;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        height: 50px; }
+        .tp_user_wrapper .tp_userList_title .tp_titleList.title_list span {
+          color: #909090; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList.user_list {
+        height: 60px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e5e5e5; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList .tp_user_text {
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: normal; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList .user_type,
+      .tp_user_wrapper .tp_userList_title .tp_titleList .user_name {
+        width: 10%; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList .user_department {
+        width: 20%; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList .user_position {
+        width: 20%; }
+      .tp_user_wrapper .tp_userList_title .tp_titleList .user_email {
+        width: 60%; }

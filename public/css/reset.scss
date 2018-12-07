@@ -1,0 +1,56 @@
+@import './utils';
+
+body {
+    font-size: 14px;
+
+    @include notebook {
+        font-size: 12px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', 'sans-serif';
+}
+
+a {
+    &:hover {
+        color: #242424;
+    }
+    display: block;
+    color: #242424;
+    text-decoration: none;
+    outline: none;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+button {
+    border: 0px;
+    background: transparent;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    border: 0px;
+}

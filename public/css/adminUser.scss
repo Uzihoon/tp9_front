@@ -1,0 +1,94 @@
+@import './utils';
+
+.tp_user_wrapper {
+    width: 100%;
+    margin: auto;
+    min-width: 1200px;
+
+    .tp_user_box {
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .tp_user_title_wrapper {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+
+        .tp_user_title {
+            font-size: 2em;
+            color: $main;
+        }
+    }
+
+    .tp_user_title {
+        font-size: 1.1em;
+        color: #999999;
+        margin-bottom: 10px;
+    }
+
+    .tp_userList_wrapper {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .tp_userList_title {
+        width: 100%;
+
+        .tp_titleList {
+            &.title_list {
+                background-color: #f9f9f9;
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+                height: 50px;
+
+                span {
+                    color: #909090;
+                }
+
+            }
+
+            &.user_list {
+                height: 60px;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            width: 100%;
+            display: flex;
+            padding-left: 50px;
+            padding-right: 50px;
+            align-items: center;
+
+            .tp_user_text {
+                font-size: 1.2em;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: normal;
+                
+            }
+
+            .user_type,
+            .user_name {
+                width: 10%;
+            }
+
+            .user_department {
+                width: 20%;
+            }
+
+            .user_position {
+                width: 20%;
+            }
+
+            .user_email {
+                width: 60%;
+            }
+
+        }
+    }
+
+
+}

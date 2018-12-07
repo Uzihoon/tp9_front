@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP9</title>
+    <!-- font -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.7.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/dist/app.css">
+    <link rel="stylesheet" href="/dist/taskDetail.css">
+    <script src="/dist/taskDetail.js"></script>
+</head>
+
+<body>
+<section id="tp_wrapper">
+    <!-- tp9 heade -->
+    <div class="tp_head">
+        <form class="tp_search">
+            <input type="text" class="tp_search_input" placeholder="search">
+            <button class="tp_search_btn"><i class='bx bx-search'></i></button>
+        </form>
+        <div class="tp_header_info">
+            <button class="tp_add_btn"></button>
+            <a href="#" class="tp_setting"></a>
+            <div class="tp_logo">TP9</div>
+        </div>
+    </div>
+    <!-- tp9 menu -->
+    <div class="tp_menu">
+        <a href="/" class="tp_home"></a>
+        <ul class="tp_menu_list">
+            <li class="tp_menu_item"><a href="#" class="tp_menu_link "></a></li>
+            <li class="tp_menu_item tp_project_list_menu"><a href="#" class="tp_menu_link " id="projectListMenu"></a>
+            </li>
+            <li class="tp_menu_item"><a href="#" class="tp_menu_link "></a></li>
+        </ul>
+        <button class="tp_add_menu"><span class="hor"></span><span class="ver"></span></button>
+        <!-- message & drop box -->
+        <div class="tp_set_box">
+            <div class="tp_set">
+                <div class="tp_set_link">
+                    <div class="tp_icon_box" id="file_list">
+                            <span class="text_bg">
+                                <!-- 최대 2자리 -->
+                                <span class="text">99</span>
+                            </span>
+                    </div>
+                </div>
+                <div class="tp_set_link">
+                    <div class="tp_icon_box" id="msg_list">
+                        <span class="text_bg">
+                            <!-- 최대 2자리 -->
+                            <span class="text">99+</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tp_section">
+        <div class="tp_main_section">
+            <div class="tp_calendar_container">
+                <div class="tp_task_detail_container">
+                    <!--SSR Task Title List-->
+                    <div class="tp_task_detail_header">
+                        <div class="tp_task_detail_title_list_box">
+                            <div class="task_listBox">
+                                <div class="taskList" id="taskInfo" data-project-id="2" data-task-id="14">개발</div>
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                            <div class="task_hide_box mater_design_shadow">
+                                <div class="task_hide"><a href="#" data-task-id="2">개발</a></div>
+                                <div class="task_hide"><a href="#" data-task-id="3">기획</a></div>
+                                <div class="task_hide"><a href="#" data-task-id="4">디자인</a></div>
+                                <div class="task_hide"><a href="#" data-task-id="5">마케팅</a></div>
+                            </div>
+                        </div>
+                        <div class="tp_task_detail_date_box dateSetting">
+                            <input readonly value="2018.01.01">
+                            <div>-</div>
+                            <input readonly value="2018.01.01" class="task-date dateInput">
+                        </div>
+                    </div>
+
+                    <div class="tp_task_detail_info_container">
+                        <div class="tp_info_title">전체 상황</div>
+                        <div class="tp_info_box">
+                            <!-- task rendering -->
+                        </div>
+                    </div>
+                    <div class="tp_task_detail_work_container">
+                        <div class="tp_work_title_box">
+                            <div class="tp_work_title">워크 담당자</div>
+                            <div class="tp_work_plus">
+                                <div class="hor"></div>
+                                <div class="ver"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tp_sch_container">
+                <div class="tp_sch_list_box">
+                    <div class="tp_task_due_date_box">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+
+</html>

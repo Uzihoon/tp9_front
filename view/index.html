@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP9</title>
+    <!-- font -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.7.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/dist/app.css">
+    <link rel="stylesheet" href="/dist/main.css">
+    <script src="/dist/main.js"></script>
+</head>
+
+<body>
+    <section id="tp_wrapper">
+        <!-- tp9 heade -->
+        <div class="tp_head">
+            <form class="tp_search">
+                <input type="text" class="tp_search_input" placeholder="search">
+                <button class="tp_search_btn"><i class='bx bx-search'></i></button>
+            </form>
+            <div class="tp_header_info">
+                <button class="tp_add_btn"></button>
+                <a href="#" class="tp_setting"></a>
+                <div class="tp_logo">TP9</div>
+            </div>
+        </div>
+        <!-- tp9 menu -->
+        <div class="tp_menu">
+            <a href="/" class="tp_home"></a>
+            <ul class="tp_menu_list">
+                <li class="tp_menu_item"><a href="#" class="tp_menu_link "></a></li>
+                <li class="tp_menu_item tp_project_list_menu"><a href="#" class="tp_menu_link " id="projectListMenu"></a></li>
+                <li class="tp_menu_item"><a href="#" class="tp_menu_link "></a></li>
+            </ul>
+            <button class="tp_add_menu"><span class="hor"></span><span class="ver"></span></button>
+            <!-- message & drop box -->
+            <div class="tp_set_box">
+                <div class="tp_set">
+                    <div class="tp_set_link">
+                        <div class="tp_icon_box" id="file_list">
+                            <span class="text_bg">
+                                <!-- 최대 2자리 -->
+                                <span class="text">99</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tp_set_link">
+                        <div class="tp_icon_box" id="msg_list">
+                            <span class="text_bg">
+                                <!-- 최대 2자리 -->
+                                <span class="text">99+</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tp_section">
+            <!-- <button class="tp_new_btn" id="project_btn"><i class='bx bx-plus'></i> 새 프로젝트</button> -->
+            <div class="tp_main_section">
+                <div class="tp_calendar_container">
+                    <div class="calendar_box">
+                        <div class="tp_cal_title">
+                            <button class="prev"><i class='bx bx-chevron-left'></i></button>
+                            <h3 class="cal_title"><b></b><span></span></h3>
+                            <button class="next"><i class='bx bx-chevron-right'></i></button>
+                            <button class="tp_new_btn" id="project_btn"></button>
+                        </div>
+                        <!-- calendar -->
+                        <div id="tp_calendar">
+                            <div id="header"></div>
+                            <div id="body"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tp_sch_container">
+                    <div class="tp_sch_list_box">
+                        <div class="tp_sch_box">
+                            <div class="tp_sch_title">
+                                <div class="tp_sch_title_box">
+                                    <b class="mainColor date_text">Today</b> <span>일정상황</span>
+                                </div>
+                                <div class="tp_sch_btn_box">
+                                    <div id="schBtn">
+                                        <div class="hor"></div>
+                                        <div class="ver"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- event list -->
+                        <div class="tp_sch_list" id="schList"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
